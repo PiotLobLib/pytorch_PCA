@@ -27,7 +27,6 @@ class PrincipalComponentAnalysis:
             "cuda" if torch.cuda.is_available() else "cpu")
         self.num_components = num_components
 
-        self.in_bound = None
         self.eigen_vectors = None
         self.original_ratios = None
         self.variance_ratios = None
@@ -127,8 +126,6 @@ class PrincipalComponentAnalysis:
             err = "No suitable number of components found "
             err += "within the specified ratio bounds."
             raise ValueError(err)
-
-        self.in_bound = len(valid_indices)
 
         return valid_indices[0].item() + 1
 
