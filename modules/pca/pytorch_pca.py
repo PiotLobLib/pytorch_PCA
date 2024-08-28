@@ -9,9 +9,6 @@ class PrincipalComponentAnalysis:
     Implements Principal Component Analysis (PCA) using PyTorch by leveraging
     Singular Value Decomposition (SVD).
     """
-    _validation_rules = {
-        "num_components": int
-    }
 
     def __init__(
             self,
